@@ -1,0 +1,39 @@
+.user-img{
+    border-radius: 50%;
+}
+
+.username-conatiner{
+    margin-top : 56px;
+}
+
+.banner-username{
+    margin-top : 56px;
+    padding: 32px;
+    margin-bottom: 32px;
+    background: #f3f3f3;
+}
+
+.container-username{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : white
+}
+
+.username-details{
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.username-banner-button{
+    border: 1px solid #999;
+    color: #999;
+    border-radius: .2rem;
+
+}
+

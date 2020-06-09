@@ -1,0 +1,26 @@
+.headerTitle {
+    margin-left: 50px;
+    font-size: 1.25rem;
+    font-family: none;
+    color: #5cb85c;
+}
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    height: 56px;
+}
+
+.linkClass{
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+}
+.linkClass:hover{
+    color: #5cb85c;
+}

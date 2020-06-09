@@ -1,0 +1,54 @@
+.article{
+    width: 600px;
+    height: 40px;
+    font-size: 1.2rem;
+}
+
+.font-change{
+    font-size: 1rem;
+}
+
+.textarea{
+    height: 100px;
+}
+
+.articleContainer{
+    display: flex;
+}
+.articleImg{
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+    width: 32px;
+    border-radius: 30px;
+}
+
+.spanDate{
+    color: #bbb;
+    font-size: .8rem;
+    display: block;
+}
+.btn-like-article{
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    border-radius: .2rem;
+    float: right;
+}
+
+.titleArticle{
+    font-weight: 600!important;
+    font-size: 1.5rem!important;
+    margin-bottom: 3px;
+}
+
+.username-article{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 1.5rem 0 .3rem;
+    line-height: 1rem;
+    
+}
+
+.remove-underline-article{
+    text-decoration: none;
+}

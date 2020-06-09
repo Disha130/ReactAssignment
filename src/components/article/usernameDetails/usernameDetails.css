@@ -1,0 +1,86 @@
+.username-container-details{
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active{
+    color :#5cb85c;
+    border-bottom-color :#5cb85c;
+}
+
+.ant-tabs-tab:hover{
+    color :#5cb85c;
+}
+
+.username-item-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+
+.username-detail{
+    display: flex;
+}
+.username-details-username{
+    font-size: 18px;
+    font-weight: 500;
+    color: #5cb85c;
+    cursor: pointer;
+}
+
+.username-detail-img{
+    border-radius: 50%;
+}
+
+.username-date{
+    margin-left: 10px;
+}
+.username-details{
+    font-size: 18px;
+    font-weight: 500;
+    color: #5cb85c;
+    cursor: pointer;
+}
+.username-item-date{
+    color: #bbb;
+    font-size: .8rem;
+}
+
+.username-desc-title{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+.username-desc-info{
+    font-weight: 300;
+    color: #999;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    cursor: pointer;
+}
+.username-more{
+    font-size: .8rem;
+    font-weight: 300;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.username-favorite{
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    border-radius: .2rem;
+}
+
+.username-my-link{
+    color :#5cb85c;
+}
+
+.title-link{
+    color:black
+}
+
