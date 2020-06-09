@@ -100,7 +100,6 @@ class Details extends React.Component {
   //render function
   render() {
     const username = localStorage.getItem('UserName');
-    console.log('username', username);
     let flagFollow = false;
     const { SlugArticles, getComment } = this.props;
     //check if user name same is login user then show add/edit article
