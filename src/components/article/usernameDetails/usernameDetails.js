@@ -5,6 +5,7 @@ import { Tabs } from 'antd';
 import { getFavouriteArticle, getMyArticle } from '../../../store/articles/actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import {Link} from 'react-router-dom';
 
 const { TabPane } = Tabs;
 //Create Class Component
@@ -45,21 +46,21 @@ class UserNameDetails extends React.Component {
                           </div>
                           <div className="username-date">
                             <div className="username-details-username">
-                              <a href={`/username/${article.author.username}`} className="username-my-link">{article.author.username}</a>
+                              <Link to={`/username/${article.author.username}`} className="username-my-link">{article.author.username}</Link>
                             </div>
                             <span className="username-item-date">{new Date(article.createdAt).toDateString()}</span>
                           </div>
                         </div>
                         <div className="username-desc">
                           <div className="username-desc-title">
-                            <a href={`/Details/${article.slug}`} className="title-link">{article.title}</a>
+                            <Link to={`/Details/${article.slug}`} className="title-link">{article.title}</Link>
                           </div>
                           <div className="username-desc-info">
-                            <a href={`/Details/${article.slug}`} className="description-link">{article.description}</a>
+                            <Link to={`/Details/${article.slug}`} className="description-link">{article.description}</Link>
                           </div>
                         </div>
                         <div className="username-more">
-                          <a href={`/Details/${article.slug}`} className="description-link">Read more...</a>
+                          <Link to={`/Details/${article.slug}`} className="description-link">Read more...</Link>
                         </div>
                       </div>
                       <div className="username-favorite">
@@ -81,21 +82,21 @@ class UserNameDetails extends React.Component {
                           </div>
                           <div className="username-date">
                             <div className="username-details-username">
-                              <a href={`/username/${article.author.username}`} className="username-my-link">{article.author.username}</a>
+                              <Link to={`/username/${article.author.username}`} className="username-my-link">{article.author.username}</Link>
                             </div>
                             <span className="username-item-date">{new Date(article.createdAt).toDateString()}</span>
                           </div>
                         </div>
                         <div className="username-desc">
                           <div className="username-desc-title">
-                            <a href={`/Details/${article.slug}`} className="title-link">{article.title}</a>
+                            <Link to={`/Details/${article.slug}`} className="title-link">{article.title}</Link>
                           </div>
                           <div className="username-desc-info">
-                            <a href={`/Details/${article.slug}`} className="description-link">{article.description}</a>
+                            <Link to={`/Details/${article.slug}`} className="description-link">{article.description}</Link>
                           </div>
                         </div>
                         <div className="username-more">
-                          <a href={`/Details/${article.slug}`} className="description-link">Read more...</a>
+                          <Link to={`/Details/${article.slug}`} className="description-link">Read more...</Link>
                         </div>
                       </div>
                       <div className="username-favorite">

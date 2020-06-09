@@ -6,6 +6,7 @@ import Banner from "./banner/banner";
 import { Tabs } from "antd";
 import '../home/home.css';
 import ReactPaginate from 'react-paginate';
+import {Link} from 'react-router-dom';
 
 const { TabPane } = Tabs;
 //Create Class Component
@@ -78,24 +79,24 @@ class Home extends React.Component {
                         <div className="feed-item">
                           <div className="feed-user-detail">
                             <div>
-                              <a href={`/username/${article.author.username}`} ><img src={article.author.image} className="feed-user-detail-img" height="32px" width="32px" /></a>
+                              <Link to={`/username/${article.author.username}`} ><img src={article.author.image} className="feed-user-detail-img" height="32px" width="32px" /></Link>
                             </div>
                             <div className="feed-username-date">
                               <div className="feed-username">
-                                <a href={`/username/${article.author.username}`} className="username-link">{article.author.username}</a></div>
+                                <Link to={`/username/${article.author.username}`} className="username-link">{article.author.username}</Link></div>
                               <span className="feed-item-date">{new Date(article.createdAt).toDateString()}</span>
                             </div>
                           </div>
                           <div className="feed-desc">
                             <div className="feed-desc-title">
-                              <a href={`/Details/${article.slug}`} className="title-link">{article.title}</a>
+                              <Link to={`/Details/${article.slug}`} className="title-link">{article.title}</Link>
                             </div>
                             <div className="feed-desc-info">
-                              <a href={`/Details/${article.slug}`} className="description-link">{article.description}</a>
+                              <Link to={`/Details/${article.slug}`} className="description-link">{article.description}</Link>
                             </div>
                           </div>
                           <div className="feed-more">
-                            <a href={`/Details/${article.slug}`} className="description-link">Read more...</a>
+                            <Link to={`/Details/${article.slug}`} className="description-link">Read more...</Link>
                           </div>
                         </div>
                         <ul className="feed-tags">
@@ -122,25 +123,25 @@ class Home extends React.Component {
                       <div className="feed-item">
                         <div className="feed-user-detail">
                           <div>
-                            <a href={`/username/${article.author.username}`} ><img src={article.author.image} className="feed-user-detail-img" height="32px" width="32px" /></a>
+                            <Link to={`/username/${article.author.username}`} ><img src={article.author.image} className="feed-user-detail-img" height="32px" width="32px" /></Link>
                           </div>
                           <div className="feed-username-date">
                             <div className="feed-username">
-                              <a href={`/username/${article.author.username}`} className="username-link">{article.author.username}</a>
+                              <Link to={`/username/${article.author.username}`} className="username-link">{article.author.username}</Link>
                             </div>
                             <span className="feed-item-date">{new Date(article.createdAt).toDateString()}</span>
                           </div>
                         </div>
                         <div className="feed-desc">
                           <div className="feed-desc-title">
-                            <a href={`/Details/${article.slug}`} className="title-link">{article.title}</a>
+                            <Link to={`/Details/${article.slug}`} className="title-link">{article.title}</Link>
                           </div>
                           <div className="feed-desc-info">
-                            <a href={`/Details/${article.slug}`} className="description-link"> {article.description}</a>
+                            <Link to={`/Details/${article.slug}`} className="description-link"> {article.description}</Link>
                           </div>
                         </div>
                         <div className="feed-more">
-                          <a href={`/Details/${article.slug}`} className="description-link"> Read more...</a></div>
+                          <Link to={`/Details/${article.slug}`} className="description-link"> Read more...</Link></div>
                       </div>
                       <ul className="feed-tags">
                         {(article.tagList && article.tagList.length > 0) && article.tagList.map(tag => {

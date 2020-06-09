@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
 import { postCommentData, getCommentData, getDeleteData } from '../../../store/comment/actions';
 import { getUserFeed, getGlobalFeed, getTagList } from '../../../store/articles/actions';
+import {Link} from 'react-router-dom';
 
 //get user name from local storage
 const username = localStorage.getItem('UserName');
@@ -115,15 +116,15 @@ class Details extends React.Component {
             <div className="detail-top-title">{SlugArticles.title}</div>
             <div className="detail-user-info">
               <div className="avtar-img-detail">
-               <a href ={`/username/${SlugArticles.author?.username}`}> <img
+               <Link to ={`/username/${SlugArticles.author?.username}`}> <img
                   alt=""
                   className="avtar-img"
                   height="32px"
                   width="32px"
                   src={SlugArticles.author?.image}
-                /></a>
+                /></Link>
                 <div className="detail-username">
-                  <a href={`/username/${SlugArticles.author?.username}`}>{SlugArticles.author?.username}</a>
+                  <Link to={`/username/${SlugArticles.author?.username}`}>{SlugArticles.author?.username}</Link>
                   <span>{new Date(SlugArticles.createdAt).toDateString()}</span>
                 </div>
                 {flagFollow ? (<>
@@ -154,15 +155,15 @@ class Details extends React.Component {
             </div>
             <div className="deatil-post-container">
               <div className="avtar-img-post">
-              <a href ={`/username/${SlugArticles.author?.username}`}> <img
+              <Link to ={`/username/${SlugArticles.author?.username}`}> <img
                   alt=""
                   className="avtar-img"
                   height="32px"
                   width="32px"
                   src={SlugArticles.author?.image}
-                /></a>
+                /></Link>
                 <div className="detail-username green-color">
-                  <a href={`/username/${SlugArticles.author?.username}`}>{SlugArticles.author?.username}</a>
+                  <Link to={`/username/${SlugArticles.author?.username}`}>{SlugArticles.author?.username}</Link>
                   <span>{new Date(SlugArticles.createdAt).toDateString()}</span>
                 </div>
                 {flagFollow ? (<>

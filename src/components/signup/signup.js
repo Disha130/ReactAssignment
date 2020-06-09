@@ -5,6 +5,7 @@ import isValidEmail from '../../helper/emailValidation';
 import isValidUserName from '../../helper/alphabate';
 import { signUp } from '../../store/auth/actions';
 import './signup.css';
+import {Link} from 'react-router-dom';
 
 //Create Class Component
 class SignUp extends React.Component {
@@ -131,9 +132,9 @@ class SignUp extends React.Component {
         <form onSubmit={this.signUpHandle}>
           <div className="title-signup">Sign Up</div>
           <p className="linksignup">
-            <a href="/signin">
+            <Link to="/signin">
               Have an account?
-            </a>
+            </Link>
           </p>
           <div className="form-container-signup">
             <div className="form-group">

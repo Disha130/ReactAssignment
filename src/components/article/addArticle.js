@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './addArticle.css';
-import axios from "axios";
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -22,14 +21,6 @@ useEffect also allows us to combine componentDidMount and componentDidUpdate . *
       const { getSlugArticle, articleData } = props;
       getSlugArticle({ slug: props.match.params.slug }).then((response) => {
         let articleEditData = response.article;
-        //Need to work here
-        let tagObject = [];
-        if (articleEditData?.tagList && articleEditData.tagList.length > 0) {
-          articleEditData.tagList.forEach(element => {
-            console.log('element', element);
-            tagObject.push(element);
-          });
-        }
         let form = {
           title: articleEditData.title,
           articleAbout: articleEditData.description,

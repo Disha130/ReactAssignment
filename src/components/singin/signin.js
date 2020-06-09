@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import './signin.css';
 import isValidEmail from '../../helper/emailValidation';
 import { login } from '../../store/auth/actions';
+import {Link} from 'react-router-dom';
 
 //Create Class Component
 class SignIn extends React.Component {
@@ -112,9 +113,9 @@ class SignIn extends React.Component {
         <form onSubmit={this.login}>
           <div className="title-signin">Sign In</div>
           <p className="linksignin">
-            <a href="/signup">
+            <Link to="/signup">
               Need an account?
-            </a>
+            </Link>
           </p>
           <div className="form-container">
             <div className="form-group">
