@@ -187,7 +187,7 @@ class Details extends React.Component {
                     </>
                   )}
               </div>
-              {username ? (
+              {!username ? (
                 <form className="comment comment-form" onSubmit={this.handleSubmit}>
                 <div className="comment-block">
                   <textarea className="form-control-textarea" name="comment" value={this.state.comment} placeholder="Write a comment..." rows="8" onChange={event => this.handleChange(event, 'comment')}></textarea>
