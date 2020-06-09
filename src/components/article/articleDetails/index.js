@@ -100,6 +100,7 @@ class Details extends React.Component {
   //render function
   render() {
     const username = localStorage.getItem('UserName');
+    console.log('username', username);
     let flagFollow = false;
     const { SlugArticles, getComment } = this.props;
     //check if user name same is login user then show add/edit article
@@ -188,6 +189,7 @@ class Details extends React.Component {
                   )}
               </div>
               {username ? (
+                 <>
                 <form className="comment comment-form" onSubmit={this.handleSubmit}>
                 <div className="comment-block">
                   <textarea className="form-control-textarea" name="comment" value={this.state.comment} placeholder="Write a comment..." rows="8" onChange={event => this.handleChange(event, 'comment')}></textarea>
@@ -199,7 +201,8 @@ class Details extends React.Component {
                   </button>
                 </div>
               </form>
-              ) :("")}
+</>
+              ) :(<></>)}
               {(getComment && getComment.length > 0) && getComment.map((comment, i) => {
                 return (
                   <div className="comment" key={i}>
