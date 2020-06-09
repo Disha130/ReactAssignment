@@ -8,9 +8,7 @@ import { postCommentData, getCommentData, getDeleteData } from '../../../store/c
 import { getUserFeed, getGlobalFeed, getTagList } from '../../../store/articles/actions';
 import {Link} from 'react-router-dom';
 
-//get user name from local storage
-const username = localStorage.getItem('UserName');
-const token = localStorage.getItem('AuthToken');
+
 //call class component
 class Details extends React.Component {
   constructor(props) {
@@ -101,6 +99,7 @@ class Details extends React.Component {
   }
   //render function
   render() {
+    const username = localStorage.getItem('UserName');
     let flagFollow = false;
     const { SlugArticles, getComment } = this.props;
     //check if user name same is login user then show add/edit article
@@ -111,6 +110,8 @@ class Details extends React.Component {
       }
     }
     return (
+      //get user name from local storage
+    
       <div className="details-container">
         <div className="details-container">
           <div className="detail-top-banner">
