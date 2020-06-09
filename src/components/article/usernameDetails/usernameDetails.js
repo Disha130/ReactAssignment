@@ -45,7 +45,7 @@ class UserNameDetails extends React.Component {
                           </div>
                           <div className="username-date">
                             <div className="username-details-username">
-                              <a href="" className="username-my-link">{article.author.username}</a>
+                              <a href={`/username/${article.author.username}`} className="username-my-link">{article.author.username}</a>
                             </div>
                             <span className="username-item-date">{new Date(article.createdAt).toDateString()}</span>
                           </div>
@@ -81,7 +81,7 @@ class UserNameDetails extends React.Component {
                           </div>
                           <div className="username-date">
                             <div className="username-details-username">
-                              <a href="" className="username-my-link">{article.author.username}</a>
+                              <a href={`/username/${article.author.username}`} className="username-my-link">{article.author.username}</a>
                             </div>
                             <span className="username-item-date">{new Date(article.createdAt).toDateString()}</span>
                           </div>
